@@ -1,0 +1,13 @@
+{
+    "name": "wx-diff",
+    "version": "0.0.1",
+    "main": "diff.js",
+    "devDependencies": {
+        "jest": "^29.0.2"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "author": "https://github.com/jazzg62",
+    "description": ""
+}

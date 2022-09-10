@@ -27,7 +27,7 @@ function diff(before, after) {
                     else res[targetPath] = afterData[i];
                     break;
                 case "array":
-                    if (beforeData[i].length === 0) res[targetPath] = afterData[i];
+                    if (beforeData[i].length === 0 && afterData[i].length > 0) res[targetPath] = afterData[i];
                     else iter(beforeData[i], afterData[i], targetPath, ArrayWrapper);
                     break;
                 case "object":

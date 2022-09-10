@@ -16,6 +16,11 @@ describe("diff", () => {
         expect(stringify(diff({ a: false }, { a: true }))).toBe(stringify({ a: true }));
     });
 
+    test("array", () => {
+        expect(stringify(diff({}, { list: [] }))).toBe(stringify({ list: [] }));
+        expect(stringify(diff({ list: [] }, { list: [] }))).toBe(stringify({}));
+    });
+
     test("before the object does not exist", () => {
         expect(stringify(diff(undefined, { a: 1 }))).toBe(stringify({ a: 1 }));
         expect(stringify(diff(null, { a: 1 }))).toBe(stringify({ a: 1 }));
